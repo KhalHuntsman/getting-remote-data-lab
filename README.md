@@ -10,11 +10,14 @@ and converting JSON responses into Python data structures.
 ## Project Structure
 
 get-requester-lab/
-get-requester-lab/GetRequester.py
-get-requester-lab/testing/
-get-requester-lab/testing/test_get_requester.py
-get-requester-lab/README.md
 
+get-requester-lab/GetRequester.py
+
+get-requester-lab/testing/
+
+get-requester-lab/testing/test_get_requester.py
+
+get-requester-lab/README.md
 
 - GetRequester.py contains the GetRequester class and request logic
 - testing/test_get_requester.py holds automated tests for each method
