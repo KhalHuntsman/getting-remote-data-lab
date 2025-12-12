@@ -1,69 +1,52 @@
-# Getting Remote Data Lab
+# Get Requester Lab
 
-## The Scenario 
-It is time to practice building out your own class for retrieving remote data. In this lab, you are tasked with building a generic GetRequester class. This class will be able to take in a URL on initialization and send an HTTP GET request on command. You will also need to build a method for dealing with requests that return JSON.
+## Overview
+This lab introduces basic API consumption concepts using Python.
+The focus is on sending HTTP GET requests, handling raw response data,
+and converting JSON responses into Python data structures.
 
-## Tools and Resources 
-- [GitHub Repo](https://github.com/learn-co-curriculum/flask-getting-remote-data-lab)
-- [GET - Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
-- [HTTP methods - Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-- [requests](https://requests.readthedocs.io/en/latest/)
-- [Python JSON](https://docs.python.org/3/library/json.html)
+---
 
-## Instructions
+## Project Structure
 
-### Set Up
+get-requester-lab/
+get-requester-lab/GetRequester.py
+get-requester-lab/testing/
+get-requester-lab/testing/test_get_requester.py
+get-requester-lab/README.md
 
-Before we begin coding, let's complete the initial setup for this lesson: 
 
-* Fork and Clone
-  * For this lesson, you will need the following GitHub Repo:
-  * Go to the provided GitHub repository link.
-  * Fork the repository to your GitHub account.
-  * Clone the forked repository to your local machine.
-* Open and Run File
-  * Open the project in VSCode.
-  * Run pipenv install to install all necessary dependencies.
-  * Run pipenv shell to open instance of python shell
+- GetRequester.py contains the GetRequester class and request logic
+- testing/test_get_requester.py holds automated tests for each method
+- README.md provides an overview of the project and its functionality
 
-### Task 1: Define the Problem
+## Application Overview
+The project defines a single utility class:
 
-* Build a class to interact with api
-* Get the data
-* Convert to json data
+GetRequester
+- Accepts a URL when instantiated
+- Sends an HTTP GET request to the provided URL
+- Returns the raw response body as bytes
+- Converts JSON responses into native Python data structures
 
-### Task 2: Determine the Design
+The class is designed to be minimal and focused on core request-handling
+behavior to simplify testing and reinforce API fundamentals.
 
-* Endpoint: https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json.
-  * ```get_response_body```
-    * Query endpoint
-  * ```load_json```
-    * Convert to json data
+## Key Features
+- HTTP GET requests using the requests library
+- Raw response handling using bytes
+- JSON parsing into Python dictionaries and lists
+- Method reuse to avoid duplicated logic
+- Automated testing with pytest
 
-#### Task 3: Develop, Test, and Refine the Code
+## Running the Tests
 
-* Create feature branch
-* Build get_response_body to query endpoint
-* Convert endpoint data to json and return the data
-* Push feature branch and open a PR on GitHub
-* Merge to main
+From the project root use the following:
+- python -m pytest
 
-#### Task 4: Document and Maintain
+## General project notes
 
-Best Practice documentation steps:
-* Add comments to code to explain purpose and logic, clarifying intent / functionality of code to other developers.
-* Add screenshot of completed work included in Markdown in README.
-* Update README text to reflect the functionality of the application following https://makeareadme.com.
-* Delete any stale branches on GitHub
-* Remove unnecessary/commented out code
-* If needed, update git ignore to remove sensitive data
-
-## Submission
-
-Once all tests are passing and working code is pushed to the GitHub main branch, submit your GitHub repo through Canvas using CodeGrade.
-
-## Grading Criteria
-
-The application passes all test suites.
-* Get json data
-* Convert to Json
+Project passed through ChatGPT to identify syntax issues, validate API
+behavior, and assist in drafting this README.md file. The README.md was
+reviewed and edited for clarity, consistency, and alignment with lab
+requirements prior to submission.
